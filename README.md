@@ -491,7 +491,7 @@ If you want to use the publish workflows, add these **secrets** to your reposito
 | `DOCKERHUB_USERNAME` | Docker Hub username | `your-username` |
 | `DOCKERHUB_TOKEN` | Docker Hub access token | `your-token` |
 | `HUGGINGFACE_ACCESS_TOKEN` | Hugging Face read token (for `sd3` / `flux1-dev` bake targets) | `hf_...` |
-| `BLIBLA_SEMANTIC_RELEASE` | GitHub token for [semantic-release](https://github.com/cycjimmy/semantic-release-action) on `main` (contents/issues/PRs) | PAT or `GITHUB_TOKEN` with sufficient scope |
+| `BLIBLA_SEMANTIC_RELEASE` | GitHub token for [semantic-release](https://github.com/codfish/semantic-release-action) on `main` (contents/issues/PRs) | PAT or `GITHUB_TOKEN` with sufficient scope |
 
 **Repository variables:**
 
