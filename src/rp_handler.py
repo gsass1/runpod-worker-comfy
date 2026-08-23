@@ -366,10 +366,10 @@ def process_output_images(outputs, job_id):
 
     for rel_path in output_images:
         local_image_path = os.path.join(COMFY_OUTPUT_PATH, rel_path)
-        print(f"runpod-worker-comfy - processing {local_image_path}")
+        print("runpod-worker-comfy - processing generated image")
 
         if not os.path.exists(local_image_path):
-            print(f"runpod-worker-comfy - WARNING: missing file {local_image_path}")
+            print("runpod-worker-comfy - WARNING: generated image file is missing")
             continue
 
         if use_s3:
@@ -384,7 +384,7 @@ def process_output_images(outputs, job_id):
     if not result_images:
         return {
             "status": "error",
-            "message": f"None of the output images exist in {COMFY_OUTPUT_PATH}",
+            "message": "None of the output images exist",
         }
 
     return {
