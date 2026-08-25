@@ -502,6 +502,8 @@ If you want to use the publish workflows, add these **secrets** to your reposito
 
 **Not used by this repo:** `GH_PAT`, `RUNPOD_API_KEY`, and `RUNNER_24GB` do not appear in these workflows. Publishing goes to **Docker Hub** only; RunPod pulls the image by tag; no RunPod API key is required for CI.
 
+Publishing an image does not update an existing RunPod template or guarantee that active workers use the new image. After a release, update the production template to the intended versioned tag or immutable digest, roll the endpoint workers, check endpoint health, and submit a representative workflow. Keep the previous image reference available for rollback until verification passes.
+
 ## Acknowledgments
 
 - Thanks to [all contributors](https://github.com/blib-la/runpod-worker-comfy/graphs/contributors) for your awesome work
