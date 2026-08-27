@@ -1,2 +1,2 @@
-runpod==1.10.0
+runpod==1.9.1
 requests
